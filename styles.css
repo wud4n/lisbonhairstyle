@@ -488,3 +488,114 @@ footer {
 .contact-cta .btn {
   margin: 10px;
 }
+
+/* ... (previous CSS remains the same) ... */
+
+/* Enhanced Responsive Design */
+@media (max-width: 768px) {
+  /* Header */
+  header {
+    padding: 10px 0;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(25, 25, 25, 0.95);
+    padding: 20px 0;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    cursor: pointer;
+  }
+
+  /* Hero Section */
+  .hero-content {
+    padding: 2rem;
+    width: 90%;
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  /* Services Section */
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-item {
+    padding: 20px;
+  }
+
+  /* Reviews Section */
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Contact Section */
+  .contact-wrapper {
+    flex-direction: column;
+  }
+
+  .contact-info, .contact-cta {
+    width: 100%;
+    padding: 30px;
+  }
+
+  /* General Section Padding */
+  section {
+    padding: 60px 0;
+  }
+
+  section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+}
+
+/* Additional styles for even smaller screens */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .service-item, .review-item {
+    padding: 15px;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-item i {
+    margin-bottom: 10px;
+  }
+}
