@@ -17,17 +17,16 @@ function Header() {
 
   return (
     <header className={isScrolled ? "scrolled" : ""}>
-      <div className="header-container">
-        <a href="#" className="logo">Lisbon Hair Style</a>
-        <div className="menu-toggle" onClick={toggleMenu}>
-          <i className={`fas ${isMenuOpen ? 'fa-times' : 'fa-bars'}`}></i>
-        </div>
+      <div className="container">
         <nav>
+          <div className="menu-toggle" onClick={toggleMenu}>
+            <i className={`fas ${isMenuOpen ? 'fa-times' : 'fa-bars'}`}></i>
+          </div>
           <ul className={isMenuOpen ? "show" : ""}>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#reviews">Reviews</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#home" onClick={toggleMenu}>Home</a></li>
+            <li><a href="#services" onClick={toggleMenu}>Services</a></li>
+            <li><a href="#reviews" onClick={toggleMenu}>Reviews</a></li>
+            <li><a href="#contact" onClick={toggleMenu}>Contact</a></li>
           </ul>
         </nav>
       </div>
